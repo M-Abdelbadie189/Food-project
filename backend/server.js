@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
+import orderRouter from "../routes/orderRoute.js";
 
 //app config
 const app = express();
@@ -25,3 +26,5 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Backend server is running on https:localhost:${port}`);
 });
+
+app.use ("/api/order",orderRouter)

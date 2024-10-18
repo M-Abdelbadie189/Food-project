@@ -9,6 +9,11 @@ const Navbar = (setShowLogin) => {
   const [menu, setMenu] = useState("Home");
 
 const{getTotalCartAmount} = useContext(StoreContext);
+const navigate = () =>{
+  localStorage.removeitem("token");
+  setToken("");
+  navigate("/")
+}
 
   return (
     <div className="navbar">
@@ -52,6 +57,13 @@ const{getTotalCartAmount} = useContext(StoreContext);
           <div className={getTotalCartAmount()===0 ?"":"dot"}></div>
         </div>
         <button onClick={()=>setShowLogin(true)}>Sign In</button>
+        :<div className='navbar-profile'>
+          <img src={assets.profile_icon} alt="" />
+          <ul className="nav-profile-dropdown">
+          </ul>
+
+
+        </div>
       </div>
     </div>
   );
