@@ -1,10 +1,11 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import axios from "axios";
+import { food_list } from "./../assets/assets2";
 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const [food_list, setFoodList] = useState([]);
+  // const [food_list, setFoodList] = useState([]);
   const [cartItem, setCartItem] = useState({});
   //change to your locallllllllllllllllllllllllllllllllllllllll  hosttttttttttttttttttttttttt
   const url = "http://localhost:4000";
@@ -46,29 +47,29 @@ const StoreContextProvider = (props) => {
     }
     return totalAmount;
   };
-  const fetchFoodList = async () => {
-    const response = await axios.get(url + "/api/food/list");
-    setFoodList(response.data.data);
-  };
-  const loadCartData = async (token) => {
-    const response = await axios.post(
-      url + "/api/cart/get",
-      {},
-      { headers: { token } }
-    );
-    setCartItem(response.data.cartData);
-  };
-  useEffect(() => {
-    async function loadData() {
-      await fetchFoodList();
+  // const fetchFoodList = async () => {
+  //   const response = await axios.get(url + "/api/food/list");
+  //   setFoodList(response.data.data);
+  // };
+  // const loadCartData = async (token) => {
+  //   const response = await axios.post(
+  //     url + "/api/cart/get",
+  //     {},
+  //     { headers: { token } }
+  //   );
+  //   setCartItem(response.data.cartData);
+  // };
+  // useEffect(() => {
+  //   async function loadData() {
+  //     await fetchFoodList();
 
-      if (localStorage.getItem("token")) {
-        setToken(localStorage.getItem("token"));
-        await loadCartData(localStorage.getItem("token"));
-      }
-    }
-    loadData();
-  }, []);
+  //     if (localStorage.getItem("token")) {
+  //       setToken(localStorage.getItem("token"));
+  //       await loadCartData(localStorage.getItem("token"));
+  //     }
+  //   }
+  //   loadData();
+  // }, []);
   const contextValue = {
     food_list,
     cartItem,
