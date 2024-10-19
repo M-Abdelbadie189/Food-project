@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './foodDisplay.css';
 import { StoreContext } from '../../context/StoreContext';
-import FoodItem from '../Fooditem/Fooditem'; // تأكد من كتابة "FoodItem" بالأحرف الكبيرة
+import FoodItem from '../Fooditem/Fooditem'; 
 
 const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
@@ -11,8 +11,7 @@ const FoodDisplay = ({ category }) => {
       <h2>Top dishes near you</h2>
       <div className="food-display-list">
         {food_list.map((item, index) => {
-          console.log(category, item.category); // يُظهر فئة الطعام
-          // استخدم التعبير الشرطي لإرجاع FoodItem أو null
+          console.log(category, item.category); 
           if (category === "All" || category === item.category) {
            
              return  <FoodItem 
@@ -21,7 +20,6 @@ const FoodDisplay = ({ category }) => {
               
             
           }
-          // return null; 
         })}
       </div>
     </div>

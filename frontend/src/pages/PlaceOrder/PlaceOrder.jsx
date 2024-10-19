@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 const PlaceOrder = () => {
   const { getTotalCartAmount } = useContext(StoreContext);
-
   return (
     <form className="place-order">
       <div className="place-order-left">
@@ -25,7 +24,6 @@ const PlaceOrder = () => {
         </div>
         <input type="text" placeholder="Phone number" />
       </div>
-
       <div className="place-order-right">
         <div className="cart-total">
           <h2>Cart Totals</h2>
