@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'; 
 import './LoginPopup.css';
 //  import data from '../../../../backend/node_modules/@mongodb-js/saslprep/dist/code-points-data-browser.d';
-import { StoreContext } from '../../context/StoreContext';
+import { StoreContext } from '../../context/StoreContext.jsx';
 import axios from 'axios';
 const LoginPopup = ({ setShowLogin }) => { 
 
