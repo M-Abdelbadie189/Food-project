@@ -28,7 +28,7 @@ const Cart = () => {
             return (
               <div>
                 <div className="cart-items-title cart-items-item">
-                  <img src={url+"/images/"+item.image} alt="" />
+                  <img src={url + "/images/" + item.image} alt="" />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartItem[item._id]}</p>
@@ -41,7 +41,7 @@ const Cart = () => {
               </div>
             );
           }
-        })} 
+        })}
       </div>
       <div className="cart-bottom">
         <div className="cart-total">
@@ -54,12 +54,14 @@ const Cart = () => {
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>${getTotalCartAmount()===0?0:2}</p>
+              <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>${getTotalCartAmount()===0?0:getTotalCartAmount() + 2}</b>
+              <b>
+                ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
+              </b>
             </div>
           </div>
           <button onClick={() => navigate("/order")}>CHECKOUT</button>

@@ -25,7 +25,7 @@
     overflow: scroll;
 }
 
-.explore-menu-list:: ::-webkit-scrollbar
+.explore-menu-list::-webkit-scrollbar
 {
     display: none;
 } 

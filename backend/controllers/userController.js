@@ -71,7 +71,7 @@ import validator from "validator";
 
            const user = await newUser.save();
            const token = createToken(user._id);
-           res.json({ success: true, message: "Registration successful", token });
+           res.json({ success: true, token });
 
             }catch (error) {
                 console.log(error);

@@ -45,7 +45,7 @@ const logout = () => {
         </li>
         <li
           onClick={() => setMenu("Contact Us")}
-          className={menu === "Contact Us" ? "active" : ""}
+          className={menu === "Contact Us" ? "active" : " "}
         >
           Contact Us
         </li>
@@ -59,7 +59,7 @@ const logout = () => {
           </Link>
           <div className={getTotalCartAmount()===0 ?"":"dot"}></div>
         </div>
-        {!token?<button onClick={()=>setShowLogin(true)}>Sign Up</button>
+        {!token?<button onClick={()=>setShowLogin(true)}>Sign in</button>
         :<div className="navbar-profile">
           <img src="./profile_icon.png" alt="" />
           <ul className="navbar-profile-dropdown">
