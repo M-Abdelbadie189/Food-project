@@ -63,7 +63,7 @@ const logout = () => {
         :<div className="navbar-profile">
           <img src="./profile_icon.png" alt="" />
           <ul className="navbar-profile-dropdown">
-            <li><img src={"./bag_icon.png"} alt="" /><p>Order</p></li>
+            <li onClick={()=>navigate("/myorders")}><img src={"./bag_icon.png"} alt="" /><p>Order</p></li>
             <hr />
             <li onClick={logout}><img src="./logout_icon.png" alt="" /><p>Logout</p></li>
 
