@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cart.css";
 import { useContext } from "react";
-import { StoreContext } from "../../context/StoreContext";
+import { StoreContext } from "../../context/StoreContext.jsx";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
@@ -26,7 +26,7 @@ const Cart = () => {
         {food_list.map((item, index) => {
           if (cartItem[item._id] > 0) {
             return (
-              <div>
+              <div key={index}>
                 <div className="cart-items-title cart-items-item">
                   <img src={url + "/images/" + item.image} alt="" />
                   <p>{item.name}</p>
