@@ -6,6 +6,8 @@
     flex-direction: column;
     gap: 20px;
     margin-top: 30px;
+    border-radius: 0;
+    box-shadow: none;
 }
 .my-orders-order{
     display: grid;
