@@ -9,6 +9,10 @@ import Footer from "./components/Footer/Footer";
 import Verify from "./pages/Verify/Verify";
 import MyOrders from "./pages/MyOrders/MyOrders";
 import Login from "./components/Login/Login";
+import Menu from './pages/Menu/Menu';
+import ReservationPage from "./pages/Reservation/Reservation";
+import ContactUs from './pages/ContactUs/ContactUs';
+
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -20,6 +24,9 @@ const App = () => {
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/reservation" element={<ReservationPage />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/verify" element={<Verify/>} />

@@ -26,33 +26,45 @@ const logout = () => {
 
       <ul className="Navbar-menu">
         <li
-          onClick={() => setMenu("Home")}
+          onClick={() => {
+            navigate("/");
+            setMenu("Home");
+          }}
           className={menu === "Home" ? "active" : ""}
         >
           Home
         </li>
         <li
-          onClick={() => setMenu("Menu")}
+          onClick={() => {
+            navigate("/menu");
+            setMenu("Menu");
+          }}
           className={menu === "Menu" ? "active" : ""}
         >
           Menu
         </li>
         <li
-          onClick={() => setMenu("Mobile-App")}
-          className={menu === "Mobile-App" ? "active" : ""}
+          onClick={() => {
+            navigate("/reservation");
+            setMenu("Reservation");
+          }}
+          className={menu === "Reservation" ? "active" : ""}
         >
-          Mobile-App
+          Reservation
         </li>
         <li
-          onClick={() => setMenu("Contact Us")}
-          className={menu === "Contact Us" ? "active" : " "}
+          onClick={() => {
+            navigate("/contact");
+            setMenu("Contact Us");
+          }}
+          className={menu === "Contact Us" ? "active" : ""}
         >
           Contact Us
         </li>
       </ul>
 
       <div className="navbar-right">
-        <img src="search_icon.png" alt="Search" />
+        
         <div className="navbar-search-icon">
           <Link to="/cart">
             <img src="basket_icon.png" alt="Basket" />
